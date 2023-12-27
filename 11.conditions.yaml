@@ -21,4 +21,5 @@
       name: roboshop
      when: output.rc !=0 #If this expression is true then only this module will run 
 
-      
+# assignment: take username as variable, and then dynamically check user exists or not then create
+# assignment: check a directory exists or not, if not exists create it
