@@ -1,0 +1,16 @@
+- name: Testing variable precedence
+  hosts: mongodb
+  vars:
+   NAME: siva-play
+  vars_prompt:
+   - name: NAME
+     prompt: Please enter trainer Name
+     private: false
+  vars_files:
+   - variables.yaml
+  tasks:
+   - name: variables at task level
+     vars:
+      NAME: siva-task
+     ansible.builtin.debug:
+      msg: "Trainer Name is:{{NAME}}"
