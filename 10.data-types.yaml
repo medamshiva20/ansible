@@ -1,0 +1,32 @@
+#Data types are Number,String,List,Map and Boolean
+- name: Ansible variable data types
+  hosts: mongodb
+  vars:
+   - AGE: 30 #Number
+   - NAME: "Siva" #String
+   - isDevOps: true #Boolean
+   - Skills: #list
+      - DevOps
+      - AWS
+      - Docker
+   - EXPERIENCE: #map
+      DevOps: 3.5
+      AWS: 2
+      DOKCER: 3
+      KUBERNETES: 3
+  tasks:
+   - name: print number variables
+     ansible.builtin.debug:
+      msg: "{{AGE}}" 
+   - name: print string variables
+     ansible.builtin.debug:
+      msg: "{{NAME}}" 
+   - name: print number variables
+     ansible.builtin.debug:
+      msg: "{{isDevOps}}" 
+   - name: print number variables
+     ansible.builtin.debug:
+      msg: "{{Skills}}"
+   - name: print number variables
+     ansible.builtin.debug:
+      msg: "{{EXPERIENCE}}"  
