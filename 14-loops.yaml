@@ -6,6 +6,7 @@
      ansible.builtin.yum:
       name: "{{item}}"
       state: installed
+    #List of string
      loop:
       - nginx
       - mailx
