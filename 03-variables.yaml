@@ -6,7 +6,7 @@
    TRAINER: Siva
    DURATION: 110HRS
   tasks:
-   - name: print hello world
+   - name: print a message
      ansible.builtin.debug:
       msg: "Hello, I am practicing DevOps"
    - name:
