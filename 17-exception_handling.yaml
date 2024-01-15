@@ -1,5 +1,6 @@
 - name: Error Hanfling
   hosts: mongodb
+  become: yes
   tasks:
    - block:
       - name: Install httpd package
