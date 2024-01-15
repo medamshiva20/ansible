@@ -1,0 +1,26 @@
+- name: Implementing handlers
+  hosts: mongodb
+  tasks:
+   - name: Install tomcat package
+     ansible.builtin.yum:
+      name: "{{item}}"
+      state: installed
+     loop:
+      - nginx
+     notify: check url repsonse
+   - name: Repalce some section of text in a file
+     ansible.builtin.copy:
+      content: "Welcome to the Medam Siva Reddy World"
+      dest: /usr/share/nginx/html/index.html
+     notify: retsart nginx service
+  handlers:
+   - name: restart nginx service
+     ansible.builtin.service:
+      name: nginx
+      state: restarted
+   - name: check url response
+     ansible.builtin.uri:
+      url: http://172.31.28.168
+      status_code: 200
+
+
