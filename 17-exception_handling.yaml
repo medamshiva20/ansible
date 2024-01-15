@@ -19,5 +19,6 @@
          status_code: 200
         
 
-# If you want to run the ansible playbook with private key we should use below command before running below command we will do password less ssh connection between control server and managed node
+# If you want to run the ansible playbook with private key we should use below command
+# Before running below command we will do password less ssh connection between control server and managed node
 #ansible-playbook -i inventory(path of inventory) --key-file=~/.ssh/id_rsa 17-exception_handling.yaml
