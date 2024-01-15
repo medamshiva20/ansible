@@ -8,7 +8,7 @@
       state: installed
      loop:
       - nginx
-     notify: check url repsonse
+     notify: check url response
    - name: Repalce some section of text in a file
      ansible.builtin.copy:
       content: "Welcome to the Medam Siva Reddy World"
