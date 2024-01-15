@@ -8,12 +8,13 @@
       state: installed
      loop:
       - nginx
-     notify: check url response
    - name: Repalce some section of text in a file
      ansible.builtin.copy:
       content: "Welcome to the Medam Siva Reddy"
       dest: /usr/share/nginx/html/index.html
-     notify: restart nginx service
+     notify: 
+      - restart nginx service
+      - check url response
   handlers:
    - name: restart nginx service
      ansible.builtin.service:
