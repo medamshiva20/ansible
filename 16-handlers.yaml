@@ -2,7 +2,7 @@
   hosts: mongodb
   become: yes
   tasks:
-   - name: Install tomcat package
+   - name: Install nginx package
      ansible.builtin.yum:
       name: "{{item}}"
       state: installed
@@ -13,7 +13,7 @@
      ansible.builtin.copy:
       content: "Welcome to the Medam Siva Reddy World"
       dest: /usr/share/nginx/html/index.html
-     notify: retsart nginx service
+     notify: restart nginx service
   handlers:
    - name: restart nginx service
      ansible.builtin.service:
