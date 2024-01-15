@@ -10,7 +10,7 @@
       - nginx
    - name: Repalce some section of text in a file
      ansible.builtin.copy:
-      content: "Welcome to the Medam Siva Reddy"
+      content: "Welcome to the Medam Siva"
       dest: /usr/share/nginx/html/index.html
      notify: 
       - restart nginx service
