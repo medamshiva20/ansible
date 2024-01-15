@@ -1,5 +1,6 @@
 - name: Implementing handlers
   hosts: mongodb
+  become: yes
   tasks:
    - name: Install tomcat package
      ansible.builtin.yum:
