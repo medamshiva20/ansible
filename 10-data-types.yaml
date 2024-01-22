@@ -21,12 +21,12 @@
    - name: print string variables
      ansible.builtin.debug:
       msg: "{{NAME}}" 
-   - name: print number variables
+   - name: print boolean variables
      ansible.builtin.debug:
-      msg: "{{isDevOps}}" 
-   - name: print number variables
+      msg: "{{isDevOps}}"
+   - name: print list variables
      ansible.builtin.debug:
       msg: "{{Skills}}"
-   - name: print number variables
+   - name: print map variables
      ansible.builtin.debug:
       msg: "{{EXPERIENCE}}" 
