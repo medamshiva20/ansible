@@ -1,4 +1,4 @@
-- name: Error Hanfling
+- name: Error Handling
   hosts: mongodb
   become: yes
   tasks:
